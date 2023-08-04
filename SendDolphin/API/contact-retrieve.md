@@ -1,4 +1,6 @@
-Retrieve a contact
+[API](.) /
+
+# Retrieve a contact
 
 ## **GET** /restful/api/v3/contact
 
