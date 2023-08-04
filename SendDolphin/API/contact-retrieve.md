@@ -1,3 +1,5 @@
+Retrieve a contact
+
 ## **GET** /restful/api/v3/contact
 
 #### Base URL `https://senddolphin.com`
