@@ -1,4 +1,4 @@
-# How to get an SMTP account from Amazon SES?
+# How to get an SMTP credentials from Amazon SES?
 
 ## What is Amazon SES?
 
@@ -31,6 +31,8 @@ Before you are getting to the SES, you will need to config an notification subsc
 
 You have just done configurating the SNS. Now you may proceed setting up your SES.
 
+### Create a domian identity
+
 * Sign into the [Amazon SES console](https://console.aws.amazon.com/ses/) (login with your AWS account)
 * In the navigation pane, under **Configuration**, choose **Verified identities**.
 * Choose **Create identity**.
@@ -51,5 +53,76 @@ After you’ve created your domain identity configured with DKIM, you must compl
 * From the Publish DNS records table, copy the three CNAME records that appear in this section to be published (added) to your DNS provider. Alternatively, you can choose Download .csv record set to save a copy of the records to your computer.
 * The following image shows an example of the CNAME records to publish to your DNS provider. ![Example of the CNAME records to publish to your DNS provider](https://docs.aws.amazon.com/images/ses/latest/dg/images/dkim_records.png "Example of the CNAME records to publish to your DNS provider")
 * Login to your domain’s DNS or web hosting provider, and then add the CNAME records containing the values that you copied or saved previously. For more details see the [DNS/Hosting provider table](https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#just-verify-domain-proc) following these procedures.
+
+### Setting up event notification for SES
+
+In order to send email using Amazon SES, you must setup the event notification for managing bounces and complaints.
+
+* In the navigation pane, under **Configuration**, choose **Verified identities**.
+* In the **Identities** container, select the verified identity you have just created.
+* In the details screen of the verified identity you selected, choose the **Notifications** tab and select **Edit** in the **Feedback notifications** container.
+* For **Bounce feedback**, **Complaint feedback** and **Delivery feedback** choose the SNS topic you have created at the beginning.
+* Choose **Save changes**
+
+### Obtaining SES SMTP credentials
+
+You need SES SMTP credentials to add a provider on [SendDolphin](https://senddolphin.com/my/send-mail/providers), so SendDolphin be able to send email through the SES for you account.
+
+* Choose **SMTP settings** in the left navigation pane - this will open the Simple Mail Transfer Protocol (SMTP) settings page.
+* On the page, under **Simple Mail Transfer Protocol (SMTP) settings**, find the **SMTP endpoint**. It should look like `email-smtp.us-east-1.amazonaws.com`.
+* Choose **Create SMTP credentials** in the upper-right corner - the IAM console will open.
+* For **Create User for SMTP**, type a name for your SMTP user in the **User Name** field. Alternatively, you can use the default value that is provided in this field. When you finish, choose **Create user** in the bottom-right corner.
+* Expand **Show** under SMTP password - your SMTP credentials are shown on the screen.
+Download these credentials by choosing **Download .csv** file or copy them and store them in a safe place, because you can't view or save your credentials after you close this dialog box.
+* Choose **Return to SES console**.
+
+### Create a provider on SendDolphin
+
+After getting your SES SMTP credentials ready, you should be good to create create a provider on your SendDolphin account. To do so, login to your SendDolphin account, do following
+* Choose **Provider** in the left navigation.
+* Choose **Create Provider** at the right-top corner.
+* For **Provider**, choose AWS SES.
+* For **Host**, enter the SES SMTP endpoint.
+* For **Username** and **Password**, enter your SMTP credentials.
+* Choose **Save Provider** in order to save the detials you have provided.
+* Go back to the SES console.
+
+### Request SES production access
+
+Now you have done all things needed to get your SES credentials. The last thing is to move out of from the Amazon SES sandbox.
+
+* on the Amazon SES console, in the navigation pane, choose **Account dashboard**.
+* In the warning box at the top of the console that says, "Your Amazon SES account is in the sandbox", on the right-hand side, choose **Request production access**.
+* In the account details modal, select either the **Marketing** or **Transactional** radio button that best describes the majority of mail you'll be sending.
+   * **Marketing email** - Sent on a one-to-many basis to a targeted list of prospects or customers containing marketing and promotional content such as to make a purchase, download information, etc.
+   * **Transactional email** - Sent on a one-to-one basis unique to each recipient usually triggered by a user action such as a website purchase, a password reset request, etc.
+* In **Use case description**, explain how you plan to use Amazon SES to send email. You should answer the following questions:
+  * How do you plan to build or acquire your mailing list?
+  * How do you plan to handle bounces and complaints?
+  * How can recipients opt out of receiving email from you?
+  * How did you choose the sending rate or sending quota that you specified in this request?
+* You will also need to prepare 3 email templates which you are sending or plan to send to your audience. You can create template on your SendDolphin account. To do so [click here](https://senddolphin.com/my/send-mail/templates).
+
+Here are the example of Q&A for requesting SES production access.
+
+`
+Q: How do you plan to build or acquire your mailing list? 
+A: We have an website, when a user signs up to our website or newsletters, we will add his/her email to our mailing list.
+`
+
+`
+Q: How you maintain your recipient lists?
+A: When the user's account is  deleted, suspended or deactivated, the user's email will be removed from our mailing list promptly and automatically.
+`
+
+`
+Q: How do you manage bounces, complaints?
+A: We are subscribing to the SES notifications. When a bounce or complaint event received, we will remove the email address from our mailing list promptly and automatically.
+`
+
+`
+Q: How do you maintain unsubscribe requests?
+A: There is an "unsubscribe" link on the emails we sent out. When someone click on it, the recipient's email address will be removed from our mailing list promptly and automatically. Our users are also able to opt out from the mailing list in thier accounts.
+`
 
 
