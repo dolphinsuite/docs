@@ -2,19 +2,13 @@
 
 ## What is Amazon SES?
 
-Amazon SES is a cloud email service provider that can integrate into any application for bulk email sending. Whether you use an email software like [SendDolphin](https://senddolphin.com) to send transactional emails, marketing emails, or newsletter emails, you pay only for what you use.
+Amazon SES is the cheapest email provider out there on the internet that can integrate into any application for bulk email sending. Whether you use an email software like [SendDolphin](https://senddolphin.com) to send transactional emails, marketing emails, or newsletter emails, you pay only for what you use. Just follow the guide here to get your SMTP details.
 
-----
-
-## How to get an SMTP account from SES?
-
-Amazon SES is the cheapest email provider out there on the internet. Getting an SMTP account from is not quite simple, fortunately, SES is very friendly to eCommerce business, we are 100% sure that you will manage to do it. Just follow the guide here.
-
-### 1. Get an AWS account
+## 1. Get an AWS account
 
 You will be require to sign up for an AWS account if you havenot have it yet. To do so [click here](https://aws.com).
 
-### 2. Config an SNS
+## 2. Config an SNS
 
 Before you are getting to the SES, you will need to config an notification subscription as it is a requirement as long as you use the SES service. Here you go.
 
@@ -33,7 +27,7 @@ Before you are getting to the SES, you will need to config an notification subsc
   * Choose **Create subscription** at the bottom of the page.
 * You have done the SNS configuration.
 
-## Setup your SES
+## 3. Setup your SES
 
 You have just done configurating the SNS. Now you may proceed setting up your SES.
 
@@ -50,7 +44,7 @@ If your domain is www.example.com, enter example.com as your domain. Don't inclu
   * Ensure that the **Enabled** box is checked in the **DKIM signatures** field.
 * Choose **Create idntity** at the bottom of the page.
 
-#### Verifying a DKIM domain identity with your DNS provider
+### Verifying a DKIM domain identity with your DNS provider
 
 After you’ve created your domain identity configured with DKIM, you must complete the verification process with your DNS provider by following procedures.
 
