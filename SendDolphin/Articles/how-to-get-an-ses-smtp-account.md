@@ -103,7 +103,7 @@ Now you have done all things needed to get your SES credentials. The last thing 
   * How did you choose the sending rate or sending quota that you specified in this request?
 * You will also need to prepare 3 email templates which you are sending or plan to send to your audience. You can create template on your SendDolphin account. To do so [click here](https://senddolphin.com/my/send-mail/templates).
 
-Here are the example of Q&A for requesting SES production access.
+Here are the some examples of Q&A for requesting SES production access.
 
 `
 Q: How do you plan to build or acquire your mailing list? 
