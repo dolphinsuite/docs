@@ -125,4 +125,4 @@ Q: How do you maintain unsubscribe requests?
 A: There is an "unsubscribe" link on the emails we sent out. When someone click on it, the recipient's email address will be removed from our mailing list promptly and automatically. Our users are also able to opt out from the mailing list in thier accounts.
 `
 
-
+That's all. Once you submit a review of your account details, you can’t edit your details until the review is complete. The AWS Support team provides an initial response to your request within 24 hours.
