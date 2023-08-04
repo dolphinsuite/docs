@@ -1,6 +1,6 @@
 # Authentication
 
-[<< Back](..)
+[Go back](.)
 
 To authenticate, add an `Authorization` header to your API request that contains your [API Key](https://senddolphin.com/my/send-mail/api).
 
