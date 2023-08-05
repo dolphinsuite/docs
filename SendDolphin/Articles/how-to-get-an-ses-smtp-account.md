@@ -118,24 +118,24 @@ Now you have done all things needed to get your SES credentials. The last thing 
 
 Here are the some examples of Q&A for requesting SES production access.
 
-`
+```
 Q: How do you plan to build or acquire your mailing list? 
 A: We have an website, when a user signs up to our website or newsletters, we will add his/her email to our mailing list.
-`
+```
 
-`
+```
 Q: How you maintain your recipient lists?
 A: When the user's account is  deleted, suspended or deactivated, the user's email will be removed from our mailing list promptly and automatically.
-`
+```
 
-`
+```
 Q: How do you manage bounces, complaints?
 A: We are subscribing to the SES notifications. When a bounce or complaint event received, we will remove the email address from our mailing list promptly and automatically.
-`
+```
 
-`
+```
 Q: How do you maintain unsubscribe requests?
 A: There is an "unsubscribe" link on the emails we sent out. When someone click on it, the recipient's email address will be removed from our mailing list promptly and automatically. Our users are also able to opt out from the mailing list in thier accounts.
-`
+```
 
 That's all. Once you submit a review of your account details, you can’t edit your details until the review is complete. The AWS Support team provides an initial response to your request within 24 hours.
