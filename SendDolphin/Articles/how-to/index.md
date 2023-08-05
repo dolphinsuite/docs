@@ -9,4 +9,3 @@ Welcome to the SendDolphin API documents!
 * [Get SendGrid SMTP credentials](./get-sendgrid-smtp-credentials)
 * [Add a provider](./add-a-provider)
 * [Add a sender](./add-a-sender)
-* [Add a SendDolphin sender](./add-a-sender)
