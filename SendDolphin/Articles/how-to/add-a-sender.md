@@ -26,9 +26,9 @@ To add a sender to your SendDolphin account, follow the respective instructures.
 * Choose **Add sender** at the right-top corner.
 * On the **Add sender** page, do following
   * For **Provider**, choose the respective provider which you have added on the **Providers** page before.
-  * For **Sender name**, choose a name that represents your business, the name your recipients will see as the sender of your emails. 
-  * For **Sender address**, enter an email address that you are going to use as your “From” address while sending emails. The postfix of **Sender email** must match a domian that you have got it verified on the prvoider platform. For example, you have a **Verified Identity** with domian `sampledomain.com` on Amazon SES, you may use `some-prefix@sampledomain.com` as the **Sender email**.
-  * For **Reply to email**, choose an email address that your would like to receive the mail replies to, it can be any email address, that is different from **Sender address**. In the example below, `marketing@sampledomain.com` is the **Sender address** `service@gmail.com` is the **Reply to email**, when a recipient clicks Reply on the email you send out via this sender, the reply message is sent to `service@gmail.com` instead of `marketing@sampledomain.com`.
+  * For **Sender name**, enter a name that represents your business, the name your recipients will see as the sender of your emails. 
+  * For **Sender address**, enter an email address that you are going to use as your “From” address while sending emails. The postfix of **Sender email** must match a domain that you have it verified on the provider platform. For example, you have a **Verified Identity** with domain `sampledomain.com` on Amazon SES, you may use `some-prefix@sampledomain.com` as the **Sender email**.
+  * For **Reply to email**, enter an email address that your would like to receive the mail replies to, it can be any email address, that is different from **Sender address**. In the example below, `marketing@sampledomain.com` is the **Sender address** `service@gmail.com` is the **Reply to email**, when a recipient clicks Reply on the email you send out via this sender, the reply message is sent to `service@gmail.com` instead of `marketing@sampledomain.com`.
 * Choose **Save Sender**.
 
 
