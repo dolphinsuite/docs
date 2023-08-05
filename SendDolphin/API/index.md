@@ -1,4 +1,4 @@
-# SendDolphin API Docs
+# SendDolphin API docs
 
 Welcome to the SendDolphin API documents!
 

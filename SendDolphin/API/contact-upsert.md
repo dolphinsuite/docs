@@ -1,4 +1,4 @@
-[API](.) /
+[API docs](.) /
 
 # Update or create a contact
 

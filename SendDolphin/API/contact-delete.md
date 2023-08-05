@@ -1,4 +1,4 @@
-[API](.) /
+[API docs](.) /
 
 # Delete a contact
 

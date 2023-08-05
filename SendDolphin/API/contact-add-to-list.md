@@ -1,4 +1,4 @@
-[API](.) /
+[API docs](.) /
 
 # Add a contact to lists
 
