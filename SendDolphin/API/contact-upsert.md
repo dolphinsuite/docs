@@ -8,7 +8,7 @@
 
 This endpoint allows you to create a contact if not exists, update otherwise.
 
-You can find all reserved fields and custom fields [here](https://senddolphin.com/my/send-mail/custom-fields), And contact lists can be found or create [here](https://senddolphin.com/my/send-mail/contacts).
+You can find all reserved fields and custom fields [here](https://senddolphin.com/my/send-mail/custom-fields). Contact lists can be found or created [here](https://senddolphin.com/my/send-mail/contacts).
 
 ### Request body
 
