@@ -76,15 +76,28 @@ You need SES SMTP credentials to add a provider on [SendDolphin](https://senddol
 Download these credentials by choosing **Download .csv** file or copy them and store them in a safe place, because you can't view or save your credentials after you close this dialog box.
 * Choose **Return to SES console**.
 
-### Create a provider on SendDolphin
+### Add a provider on SendDolphin
 
-After getting your SES SMTP credentials ready, you should be good to create create a provider on your SendDolphin account. To do so, login to your SendDolphin account, do following
+After getting your SES SMTP credentials ready, you shall proceed to add a provider on your SendDolphin account. To do so:
+
+* Login to your [SendDolphin](https://senddolphin.com) account.
 * Choose **Provider** in the left navigation.
 * Choose **Create Provider** at the right-top corner.
 * For **Provider**, choose AWS SES.
 * For **Host**, enter the SES SMTP endpoint.
-* For **Username** and **Password**, enter your SMTP credentials.
-* Choose **Save Provider** in order to save the detials you have provided.
+* For **Username** and **Password**, enter your SES SMTP credentials.
+* Choose **Save Provider**.
+
+### Add a sender on SendDolphin
+
+* In your SendDolphin account, choose **Senders** in the left navigation.
+* Choose **Add sender** at the right-top corner.
+* On the **Add sender** page, do following
+  * For **Provider**, choose the provider you have just added.
+  * For **Sender name**, choose a name that represents your business, the name your recipients will see as the sender of your emails. 
+  * For **Sender address**, choose an email address that you are going to use as your “From” address while sending emails. The postfix of **Sender email** must match a domian of **Verified Idenities** on your SES console. For example, you have a **Verified Identity** with domian `sampledomain.com`, you may use `xxx@sampledomain.com` as the **Sender email**.
+  * For **Reply to email**, choose an email address that your would like to receive the mail replies to, it can be any email address, that is different from **Sender address**. In the example below, `marketing@sampledomain.com` is the **Sender address** `service@gmail.com` is the **Reply to email**, when a recipient clicks Reply on the email you send out via this sender, the reply message is sent to `service@gmail.com` instead of `marketing@sampledomain.com`.
+* Choose **Save Sender**.
 * Go back to the SES console.
 
 ### Request SES production access
