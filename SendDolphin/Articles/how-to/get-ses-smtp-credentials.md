@@ -25,7 +25,7 @@ Before you are getting to the SES, you will need to config an notification subsc
 * On the **Create subscription** page, in **Details** section, do the following:
   * For **Topic ARN**, choose the the topic you have just created. It should look like `arn:aws:sns:us-east-2:123456789012:the-topic-name`.
   * For **Protocol**, choose **HTTPS**.
-  * For **Endpoint**, `https://senddolphin.com/send-mail/public/ses-notification-handler?subscription-id={YOUR-ACCOUNT-ID}`. You can find your account ID [here](https://senddolphin.com/account/profile).
+  * For **Endpoint**, enter `https://senddolphin.com/send-mail/public/ses-notification-handler?subscription-id={YOUR-ACCOUNT-ID}`. You can find your account ID [here](https://senddolphin.com/account/profile).
   * Choose **Create subscription** at the bottom of the page.
 * You have done the SNS configuration.
 
