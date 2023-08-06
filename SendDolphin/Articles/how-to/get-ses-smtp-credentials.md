@@ -8,7 +8,7 @@ Amazon SES is the cheapest email provider out there on the internet that can int
 
 ## 1. Get an AWS account
 
-You will be require to sign up for an AWS account if you havenot have it yet. To do so [click here](https://aws.com).
+You will be require to sign up for an AWS account if you have not have it yet. To do so [click here](https://aws.com).
 
 ## 2. Config an SNS
 
