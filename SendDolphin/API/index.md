@@ -10,3 +10,5 @@ Welcome to the SendDolphin API docs!
 * [Add a contact to contact lists](/docs/SendDolphin/API/contact-add-to-list)
 * [Retrieve a contact](/docs/SendDolphin/API/contact-retrieve)
 * [Delete a contact](/docs/SendDolphin/API/contact-delete)
+* [Send an email](/docs/SendDolphin/API/mail-send)
+* [Automation API tutorial](/docs/SendDolphin/API/tutorial-automation)
