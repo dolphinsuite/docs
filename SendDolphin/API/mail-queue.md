@@ -22,7 +22,7 @@ This endpoint allows you to queue and send emails to multiple recipients.
 {
     "email_list": ["example@domain.com", "example2@domain.com", "not_exists_in_your_contact_list@domain.com", "malformatted email address"],
     "sender_id": "THE SENDER ID",
-    "template_id": "162574473",
+    "template_id": "THEM TEMPLATE ID",
     "params": {
         "last_name": "Stan",
         "first_name": "Lee"
