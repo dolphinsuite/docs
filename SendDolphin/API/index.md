@@ -11,4 +11,5 @@ Welcome to the SendDolphin API docs!
 * [Retrieve a contact](/docs/SendDolphin/API/contact-retrieve)
 * [Delete a contact](/docs/SendDolphin/API/contact-delete)
 * [Send an email](/docs/SendDolphin/API/mail-send)
+* [Send bulk mail](/docs/SendDolphin/API/mail-queue)
 * [Automation API tutorial](/docs/SendDolphin/API/tutorial-automation)

@@ -10,9 +10,10 @@ This endpoint allows you to send an email to a specific address.
 
 ### Attention
 
-1. Activities of mails (like opens and clicks) that sent via this API will not be tracked. If you wish to track the mail activities, you may consider adding your own tracking code (eg. adding GA materia or a beacon) to the mail body, or use [Automation](./tutorial-automation) campaigns instead of this API.
+1. Activities of mails (like opens and clicks) that sent via this API will not be tracked. If you wish to track the mail activities, you may consider adding your own tracking code to the mail body, or use [Automation](./tutorial-automation) campaigns instead of this API.
 2. If the recipient address is an existing contact in your list and `params` is set in the API request body, the `params` data will merge-override to the contact data as the final mail params, and the params will both be applied to the mail subject and mail body. 
 3. If you have set `template_id` to the request body, then `subject` and `body` should not be included.
+4. This is a single mail sender, and mail will be sent immediately once you make the call. If you wish to send bulk mail, please use the [Queue](./mail-queue) API.
 
 
 ### Request body
